@@ -7,21 +7,28 @@
     <meta name="description"
         content="Studio Fogliasso - Commercialista, Ragioniere e Revisore Legale. Servizi professionali di consulenza fiscale, contabilità e revisione aziendale.">
     <meta name="keywords" content="commercialista, ragioniere, revisore legale, consulenza fiscale, contabilità">
-    <title>Studio Fogliasso | Commercialista & Revisore Legale</title>
+    <title>Studio Fogliasso | Commercialista &amp; Revisore Legale</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/Logo2.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- Blob decorativi di sfondo -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation — Pill flottante -->
     <nav class="navbar" id="navbar">
-        <div class="container nav-container">
+        <div class="nav-container">
             <div class="logo-container">
-                <img src="assets/FOAGLIASSO_5.png" alt="Studio Fogliasso Logo" class="logo">
+                <img src="assets/LogoNew.png" alt="Studio Fogliasso Logo" class="logo">
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -30,9 +37,11 @@
             </button>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#servizi" class="nav-link">Servizi</a></li>
                 <li><a href="#chi-siamo" class="nav-link">Chi Siamo</a></li>
+                <li><a href="#servizi" class="nav-link">Servizi</a></li>
+                <li><a href="#contatti" class="nav-link">Contatti</a></li>
             </ul>
+            <a href="#contatti" class="btn-nav-cta">Prenota</a>
         </div>
     </nav>
 
@@ -41,31 +50,104 @@
         <div class="hero-background"></div>
         <div class="container hero-content">
             <div class="hero-text">
+                <span class="hero-badge">Professionisti dal 1985</span>
                 <h1 class="hero-title">
-                    <span class="title-line">Studio Fogliasso</span>
-                    <span class="title-subtitle">Commercialista & Revisore Legale</span>
+                    <span class="title-line">Guida il tuo</span>
+                    <span class="title-italic">Successo Fiscale</span>
                 </h1>
                 <p class="hero-description">
-                    Esperienza, competenza e professionalità al servizio della tua azienda.
-                    Consulenza fiscale, contabilità e revisione aziendale con soluzioni personalizzate.
+                    Trasformiamo dati fiscali complessi in strategie chiare e vincenti.
+                    Consulenza fiscale, contabilità e revisione aziendale su misura per te.
                 </p>
                 <div class="hero-cta">
-                    <a href="#servizi" class="btn btn-primary">Scopri i Servizi</a>
-                    <a href="#chi-siamo" class="btn btn-secondary">Chi Siamo</a>
+                    <a href="#servizi" class="btn btn-primary-fill">
+                        Scopri i Servizi
+                        <span class="btn-arrow-icon">→</span>
+                    </a>
+                    <a href="#chi-siamo" class="btn btn-outline">Chi Siamo</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-card">
-                    <div class="card-icon"><img src="assets/free-icon-inferential-statistics-2480756.png"
-                            alt="Consulenza Professionale"></div>
-                    <h3>Consulenza Professionale</h3>
-                    <p>Soluzioni su misura per ogni esigenza</p>
-                </div>
-            </div>
+
         </div>
         <div class="scroll-indicator">
             <span>Scorri</span>
             <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="chi-siamo" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Chi Siamo</h2>
+
+                    <!-- Profilo Professionale -->
+                    <div class="professional-profile">
+                        <div class="profile-role">Ragioniere Commercialista</div>
+                        <div class="profile-name">Luciana Fogliasso</div>
+                        <div class="profile-credentials">
+                            <span class="credential-badge">Iscritta all'Albo dei Dottori Commercialisti ed Esperti
+                                Contabili di Vercelli dal 1985</span>
+                            <span class="credential-badge">Revisore Legale iscritta al Registro dei Revisori
+                                Legali</span>
+                        </div>
+                    </div>
+
+                    <p class="about-description">
+                        Attivo dal <strong>1985</strong>, lo <strong>Studio Fogliasso</strong> affianca imprenditori,
+                        professionisti e privati con competenza, riservatezza e una cura genuina per ogni situazione.
+                        Il nostro team, composto dal titolare iscritto all'Albo e da collaboratori con esperienza
+                        pluriennale, opera con un approccio diretto: le problematiche dei nostri clienti diventano
+                        la nostra priorità.
+                    </p>
+                    <p class="about-description">
+                        Gestiamo la contabilità in tutte le sue forme — forfettaria, semplificata e ordinaria —
+                        e affianchiamo i clienti nella redazione di dichiarazioni dei redditi, dichiarazioni fiscali,
+                        elaborazione paghe e consulenza del lavoro. Supportiamo anche <strong>Associazioni ed Enti
+                            del Terzo Settore</strong> con una consulenza dedicata, e per i privati seguiamo
+                        Mod.&nbsp;730,
+                        Dichiarazioni dei Redditi e pratiche di Successione.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>40 anni di esperienza</h4>
+                                <p>Radicati nel territorio, aggiornati sulle normative</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>Il cliente al centro</h4>
+                                <p>Risposte chiare, tempi certi e massima trasparenza</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>Servizio su misura</h4>
+                                <p>Soluzioni pensate per imprese, professionisti e privati</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card glass-panel">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Anni di Esperienza</div>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Clienti Soddisfatti</div>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Dedizione</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -76,147 +158,183 @@
                 <h2 class="section-title">I Nostri Servizi</h2>
                 <p class="section-subtitle">Soluzioni complete per la gestione fiscale e contabile della tua impresa</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><img src="assets/free-icon-briefcase-522561.png" alt="Consulenza Fiscale">
-                    </div>
-                    <h3 class="service-title">Consulenza Fiscale</h3>
-                    <p class="service-description">
-                        Pianificazione fiscale, dichiarazioni dei redditi, assistenza in caso di verifiche e contenziosi
-                        tributari.
-                    </p>
-                    <ul class="service-list">
-                        <li>Dichiarazioni fiscali</li>
-                        <li>Pianificazione tributaria</li>
-                        <li>Assistenza verifiche</li>
-                    </ul>
-                </div>
 
-                <div class="service-card">
+            <!-- Filtri Categorie -->
+            <div class="services-filter">
+                <button class="filter-btn active" data-filter="all">Tutti</button>
+                <button class="filter-btn" data-filter="aziende">Aziende & Professionisti</button>
+                <button class="filter-btn" data-filter="lavoro">Lavoro & Paghe</button>
+                <button class="filter-btn" data-filter="terzo-settore">Terzo Settore</button>
+                <button class="filter-btn" data-filter="privati">Privati</button>
+            </div>
+
+            <div class="services-grid" id="servicesGrid">
+                <!-- Aziende & Professionisti -->
+                <div class="service-card" data-category="aziende">
                     <div class="service-icon"><img src="assets/free-icon-stats-223407.png" alt="Contabilità Aziendale">
                     </div>
                     <h3 class="service-title">Contabilità Aziendale</h3>
-                    <p class="service-description">
-                        Gestione completa della contabilità ordinaria e semplificata, bilanci e analisi
-                        economico-finanziarie.
-                    </p>
-                    <ul class="service-list">
-                        <li>Contabilità ordinaria</li>
-                        <li>Redazione bilanci</li>
-                        <li>Analisi finanziarie</li>
-                    </ul>
+                    <p class="service-description">Gestione completa della contabilità forfettaria, semplificata e
+                        ordinaria con redazione di bilanci e analisi economico-finanziarie.</p>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon"><img src="assets/free-icon-search-6194755.png" alt="Revisione Legale">
+                <div class="service-card" data-category="aziende">
+                    <div class="service-icon"><img src="assets/free-icon-briefcase-522561.png" alt="Consulenza Fiscale">
                     </div>
-                    <h3 class="service-title">Revisione Legale</h3>
-                    <p class="service-description">
-                        Revisione contabile e certificazione dei bilanci, controllo interno e compliance normativa.
-                    </p>
-                    <ul class="service-list">
-                        <li>Revisione bilanci</li>
-                        <li>Certificazioni</li>
-                        <li>Controllo interno</li>
-                    </ul>
+                    <h3 class="service-title">Consulenza Fiscale</h3>
+                    <p class="service-description">Pianificazione fiscale strategica e supporto continuativo per
+                        ottimizzare la posizione tributaria di imprese e professionisti.</p>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon"><img src="assets/free-icon-house-5849021.png" alt="Consulenza Societaria">
+                <div class="service-card" data-category="aziende">
+                    <div class="service-icon"><img src="assets/free-icon-search-6194755.png" alt="Assistenza Fiscale">
                     </div>
-                    <h3 class="service-title">Consulenza Societaria</h3>
-                    <p class="service-description">
-                        Costituzione società, trasformazioni, fusioni, scissioni e operazioni straordinarie.
-                    </p>
-                    <ul class="service-list">
-                        <li>Costituzione società</li>
-                        <li>Operazioni straordinarie</li>
-                        <li>Governance aziendale</li>
-                    </ul>
+                    <h3 class="service-title">Assistenza Fiscale</h3>
+                    <p class="service-description">Assistenza in caso di verifiche, accertamenti e contenziosi
+                        tributari, con tutela degli interessi del contribuente in ogni fase.</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" data-category="aziende">
+                    <div class="service-icon"><img src="assets/free-icon-lightbulb-702814.png" alt="Dichiarazioni">
+                    </div>
+                    <h3 class="service-title">Dichiarazioni</h3>
+                    <p class="service-description">Redazione e presentazione di tutte le dichiarazioni fiscali annuali
+                        per imprese, società e professionisti nel rispetto delle scadenze.</p>
+                </div>
+
+                <div class="service-card" data-category="aziende">
+                    <div class="service-icon"><img src="assets/free-icon-stats-223407.png"
+                            alt="Redazione Modello Redditi"></div>
+                    <h3 class="service-title">Redazione Modello Redditi</h3>
+                    <p class="service-description">Predisposizione e invio del Modello Redditi per persone fisiche,
+                        società di persone e società di capitali, con calcolo delle imposte dovute.</p>
+                </div>
+
+                <div class="service-card" data-category="aziende">
+                    <div class="service-icon"><img src="assets/free-icon-briefcase-522561.png"
+                            alt="Consulenza Specifica"></div>
+                    <h3 class="service-title">Consulenza Specifica</h3>
+                    <p class="service-description">Consulenze dedicate su tematiche particolari: operazioni
+                        straordinarie, passaggi generazionali, pianificazione patrimoniale e altro.</p>
+                </div>
+
+                <!-- Lavoro & Paghe -->
+                <div class="service-card" data-category="lavoro">
+                    <div class="service-icon"><img src="assets/free-icon-people-icon-12653779.png" alt="Tenuta Paghe">
+                    </div>
+                    <h3 class="service-title">Tenuta Paghe</h3>
+                    <p class="service-description">Elaborazione mensile delle buste paga, gestione degli adempimenti
+                        contributivi INPS e INAIL e calcolo del TFR.</p>
+                </div>
+
+                <div class="service-card" data-category="lavoro">
+                    <div class="service-icon"><img src="assets/free-icon-house-5849021.png" alt="Consulenza Del Lavoro">
+                    </div>
+                    <h3 class="service-title">Consulenza Del Lavoro</h3>
+                    <p class="service-description">Supporto nella gestione dei rapporti di lavoro, contratti,
+                        assunzioni, cessazioni e vertenze, nel rispetto della normativa vigente.</p>
+                </div>
+
+                <!-- Terzo Settore -->
+                <div class="service-card" data-category="terzo-settore">
+                    <div class="service-icon"><img src="assets/free-icon-search-6194755.png"
+                            alt="Redazione Statuti Associazioni"></div>
+                    <h3 class="service-title">Redazione Statuti Associazioni</h3>
+                    <p class="service-description">Assistenza nella redazione e revisione di statuti per associazioni,
+                        fondazioni e altri enti, con aggiornamento alle normative del Terzo Settore.</p>
+                </div>
+
+                <div class="service-card" data-category="terzo-settore">
                     <div class="service-icon"><img src="assets/free-icon-people-icon-12653779.png"
-                            alt="Gestione del Personale"></div>
-                    <h3 class="service-title">Gestione del Personale</h3>
-                    <p class="service-description">
-                        Elaborazione buste paga, adempimenti contributivi e previdenziali, consulenza del lavoro.
-                    </p>
-                    <ul class="service-list">
-                        <li>Buste paga</li>
-                        <li>Adempimenti INPS/INAIL</li>
-                        <li>Consulenza del lavoro</li>
-                    </ul>
+                            alt="Pro Loco e Associazioni"></div>
+                    <h3 class="service-title">Pro Loco, Associazioni, ASD ed Enti del Terzo Settore</h3>
+                    <p class="service-description">Contabilità, consulenza fiscale e adempimenti specifici per Pro Loco,
+                        ASD, associazioni di volontariato e organizzazioni non profit.</p>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon"><img src="assets/free-icon-lightbulb-702814.png" alt="Business Planning">
-                    </div>
-                    <h3 class="service-title">Business Planning</h3>
-                    <p class="service-description">
-                        Analisi di fattibilità, business plan, budget e controllo di gestione per lo sviluppo aziendale.
-                    </p>
-                    <ul class="service-list">
-                        <li>Business plan</li>
-                        <li>Budget e forecast</li>
-                        <li>Controllo di gestione</li>
-                    </ul>
+                <!-- Privati -->
+                <div class="service-card" data-category="privati">
+                    <div class="service-icon"><img src="assets/free-icon-lightbulb-702814.png" alt="730"></div>
+                    <h3 class="service-title">Modello 730</h3>
+                    <p class="service-description">Elaborazione del Modello 730 per lavoratori dipendenti e pensionati,
+                        con recupero di tutte le detrazioni e deduzioni spettanti.</p>
+                </div>
+
+                <div class="service-card" data-category="privati">
+                    <div class="service-icon"><img src="assets/free-icon-house-5849021.png"
+                            alt="Dichiarazioni Di Successione"></div>
+                    <h3 class="service-title">Dichiarazioni Di Successione</h3>
+                    <p class="service-description">Gestione completa delle pratiche di successione ereditaria:
+                        dichiarazione, volture catastali e assistenza nelle fasi di trasferimento dei beni.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="chi-siamo" class="about">
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-skew"></div>
+        <div class="container cta-content">
+            <h2 class="cta-title">Pronti a costruire<br><em>il tuo futuro fiscale?</em></h2>
+            <p class="cta-subtitle">Unisciti a centinaia di imprenditori che hanno scelto Studio Fogliasso per
+                navigare con sicurezza nel mondo fiscale.</p>
+            <div class="cta-buttons">
+                <a href="#contatti" class="btn btn-cta-white">Prenota una Consulenza</a>
+                <a href="tel:+390161477758" class="btn btn-cta-outline">Chiamaci Ora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contatti" class="contact">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">Chi Siamo</h2>
-                    <p class="about-description">
-                        Lo <strong>Studio Fogliasso</strong> è un punto di riferimento nel settore della consulenza
-                        fiscale,
-                        contabile e aziendale. Con anni di esperienza nel settore, offriamo un servizio professionale
-                        e personalizzato a imprese, professionisti e privati.
-                    </p>
-                    <p class="about-description">
-                        Il nostro approccio si basa su tre pilastri fondamentali:
-                    </p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div class="feature-text">
-                                <h4>Professionalità</h4>
-                                <p>Competenza tecnica e aggiornamento continuo</p>
-                            </div>
+            <div class="section-header">
+                <h2 class="section-title">Contattaci</h2>
+                <p class="section-subtitle">Siamo a tua disposizione per qualsiasi informazione o per fissare una
+                    consulenza</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-grid">
+                    <div class="info-card glass-panel">
+                        <div class="info-icon">
+                            <img src="assets/free-icon-location-3894030.png" alt="Indirizzo">
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div class="feature-text">
-                                <h4>Affidabilità</h4>
-                                <p>Puntualità negli adempimenti e trasparenza</p>
-                            </div>
+                        <h3>Indirizzo</h3>
+                        <p>Via Adamo Ferraris, 24<br>13046 Livorno Ferraris VC</p>
+                    </div>
+                    <div class="info-card glass-panel">
+                        <div class="info-icon">
+                            <img src="assets/free-icon-telephone-159832.png" alt="Telefono">
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <div class="feature-text">
-                                <h4>Personalizzazione</h4>
-                                <p>Soluzioni su misura per ogni cliente</p>
-                            </div>
+                        <h3>Telefono</h3>
+                        <p>+39 0161 477758<br>+39 0161 477654</p>
+                    </div>
+                    <div class="info-card glass-panel">
+                        <div class="info-icon">
+                            <img src="assets/free-icon-mail-646094.png" alt="Email">
                         </div>
+                        <h3>Email</h3>
+                        <p>studiofogliasso@virgilio.it<br>Risposta rapida</p>
+                    </div>
+                    <div class="info-card glass-panel">
+                        <div class="info-icon">
+                            <img src="assets/free-icon-lightbulb-702814.png" alt="Orari">
+                        </div>
+                        <h3>Orari</h3>
+                        <p>Lun – Ven: 8:30 – 12:30<br>PM: 14:30 – 17:30 (No Ven)</p>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Anni di Esperienza</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Clienti Soddisfatti</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Dedizione</div>
+                <div class="contact-box" id="contactBox">
+                    <div class="contact-box-glow" id="contactBoxGlow"></div>
+                    <div class="contact-box-content">
+                        <h3>Prenota una Consulenza</h3>
+                        <p>Compila il modulo o scrivici direttamente. Il team di Studio Fogliasso ti risponderà nel più
+                            breve tempo possibile.</p>
+                        <a href="mailto:studiofogliasso@virgilio.it" class="btn btn-contact" id="contactBtn">
+                            Scrivici Ora
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <div class="contact-box-badge">🏛️ Professionisti dal 1985</div>
                     </div>
                 </div>
             </div>
@@ -226,46 +344,27 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="assets/FOAGLIASSO_5.png" alt="Studio Fogliasso" class="footer-logo">
-                    <p class="footer-text">
-                        Studio Fogliasso<br>
-                        Commercialista, Ragioniere e Revisore Legale
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h4>Servizi</h4>
-                    <ul class="footer-links">
-                        <li><a href="#servizi">Consulenza Fiscale</a></li>
-                        <li><a href="#servizi">Contabilità Aziendale</a></li>
-                        <li><a href="#servizi">Revisione Legale</a></li>
-                        <li><a href="#servizi">Consulenza Societaria</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contatti</h4>
-                    <ul class="footer-links">
-                        <li>📍 Via Roma, 123 - Torino</li>
-                        <li>📞 +39 011 123 4567</li>
-                        <li>✉️ info@studiofogliasso.it</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Orari</h4>
-                    <ul class="footer-links">
-                        <li>Lun - Ven: 9:00 - 18:00</li>
-                        <li>Sabato su appuntamento</li>
-                        <li>Domenica: Chiuso</li>
-                    </ul>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Studio Fogliasso. Tutti i diritti riservati.</p>
-                <p>P.IVA: 12345678901 | Albo Commercialisti: TO-12345</p>
+                <p>&copy; 2024 Studio Fogliasso. Tutti i diritti riservati. | <a href="privacy.html"
+                        style="color: rgba(255, 255, 255, 0.75); text-decoration: underline;">Privacy Policy</a> | <a
+                        href="cookies.html" style="color: rgba(255, 255, 255, 0.75); text-decoration: underline;">Cookie
+                        Policy</a> | <a href="#" id="manageCookies"
+                        style="color: rgba(255, 255, 255, 0.75); text-decoration: underline;">Gestisci Cookie</a></p>
+                <p>P.IVA: 01951310026 | Albo Commercialisti: TO-12345</p>
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Questo sito utilizza cookie per migliorare la tua esperienza di navigazione. Maggiori informazioni nella
+                nostra <a href="cookies.html">Cookie Policy</a>.</p>
+        </div>
+        <div class="cookie-actions">
+            <button id="acceptCookies" class="btn btn-primary">OK</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

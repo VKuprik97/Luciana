@@ -8,13 +8,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -43,12 +43,12 @@ const sections = document.querySelectorAll('section[id]');
 
 function updateActiveNavLink() {
     const scrollPosition = window.pageYOffset + 100;
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -70,7 +70,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 80;
             window.scrollTo({
@@ -130,41 +130,45 @@ featureItems.forEach((item, index) => {
     observer.observe(item);
 });
 
-// ===================================
-// Form Handling
-// ===================================
-
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-        showNotification('Per favore, compila tutti i campi obbligatori.', 'error');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-        showNotification('Per favore, inserisci un indirizzo email valido.', 'error');
-        return;
-    }
-    
-    // Simulate form submission (in production, this would send to a server)
-    showNotification('Messaggio inviato con successo! Ti contatteremo presto.', 'success');
-    contactForm.reset();
+// Observe section headers
+const sectionHeaders = document.querySelectorAll('.section-header');
+sectionHeaders.forEach((header) => {
+    header.classList.add('fade-in');
+    observer.observe(header);
 });
+
+// Observe contact grid and contact box
+const contactGrid = document.querySelector('.contact-grid');
+if (contactGrid) {
+    contactGrid.classList.add('fade-in');
+    observer.observe(contactGrid);
+}
+
+const contactBox = document.querySelector('.contact-box');
+if (contactBox) {
+    contactBox.classList.add('fade-in');
+    observer.observe(contactBox);
+}
+
+// ===================================
+// Contact Box Cursor Glow Effect
+// ===================================
+
+const contactBoxEl = document.getElementById('contactBox');
+const contactBoxGlow = document.getElementById('contactBoxGlow');
+
+if (contactBoxEl && contactBoxGlow) {
+    contactBoxEl.addEventListener('mousemove', (e) => {
+        const rect = contactBoxEl.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        contactBoxGlow.style.background = `radial-gradient(circle 250px at ${x}px ${y}px, rgba(255, 255, 255, 0.12) 0%, transparent 70%)`;
+    });
+
+    contactBoxEl.addEventListener('mouseleave', () => {
+        contactBoxGlow.style.background = '';
+    });
+}
 
 // ===================================
 // Notification System
@@ -176,12 +180,12 @@ function showNotification(message, type = 'success') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
+
     // Add styles
     Object.assign(notification.style, {
         position: 'fixed',
@@ -197,9 +201,9 @@ function showNotification(message, type = 'success') {
         animation: 'slideInRight 0.3s ease-out',
         maxWidth: '400px'
     });
-    
+
     document.body.appendChild(notification);
-    
+
     // Remove after 5 seconds
     setTimeout(() => {
         notification.style.animation = 'slideOutRight 0.3s ease-out';
@@ -242,7 +246,7 @@ function animateCounter(element, target, duration = 2000) {
     const start = 0;
     const increment = target / (duration / 16);
     let current = start;
-    
+
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
@@ -277,9 +281,85 @@ statNumbers.forEach(stat => statsObserver.observe(stat));
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroBackground = document.querySelector('.hero-background');
-    
+
     if (heroBackground) {
         heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+});
+
+// ===================================
+// Services Filter Logic
+// ===================================
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+const servicesGrid = document.getElementById('servicesGrid');
+const allServiceCards = document.querySelectorAll('.service-card');
+
+if (filterBtns.length > 0 && servicesGrid) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            // Add fade-out effect to grid
+            servicesGrid.style.opacity = '0';
+
+            setTimeout(() => {
+                allServiceCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+
+                    if (filterValue === 'all' || cardCategory === filterValue) {
+                        card.style.display = 'flex';
+                        // Re-trigger observer for visible cards
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.remove('visible');
+                    }
+                });
+
+                // Fade back in
+                servicesGrid.style.opacity = '1';
+
+                // Update active nav link or scroll position if needed
+                updateActiveNavLink();
+            }, 300);
+        });
+    });
+}
+
+/* Cookie Consent logic */
+document.addEventListener('DOMContentLoaded', () => {
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptBtn = document.getElementById('acceptCookies');
+
+    if (cookieBanner && acceptBtn) {
+        // Check if user already accepted cookies
+        if (!localStorage.getItem('cookieConsent')) {
+            // Show banner with a slight delay
+            setTimeout(() => {
+                cookieBanner.classList.add('show');
+            }, 1500);
+        }
+
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'true');
+            cookieBanner.classList.remove('show');
+        });
+
+        // Manage preferences link
+        const manageBtn = document.getElementById('manageCookies');
+        if (manageBtn) {
+            manageBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                cookieBanner.classList.add('show');
+            });
+        }
     }
 });
 
@@ -292,8 +372,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
-    
-    // Update active nav link on load
+
+    // Initial observer trigger for visible items
     updateActiveNavLink();
 });
 
